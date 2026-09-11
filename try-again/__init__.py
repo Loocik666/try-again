@@ -10,15 +10,6 @@ def retry(
     exceptions: Tuple[Type[BaseException], ...] = (Exception,),
     fallback: Optional[Callable[..., Any]] = None,
 ):
-    """
-    Декоратор для повторного вызова функции при ошибках.
-    
-    :param tries: Количество попыток
-    :param delay: Начальная задержка между попытками (в секундах)
-    :param backoff: Множитель задержки (например, 2.0 увеличивает паузу в 2 раза)
-    :param exceptions: Кортеж ошибок, при которых нужно повторять вызов
-    :param fallback: Резервная функция, если все попытки исчерпаны
-    """
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @functools.wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
