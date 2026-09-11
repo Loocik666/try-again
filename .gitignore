@@ -1,0 +1,1 @@
+Nothing should be ignored based on the provided file changes. The changes only include a .gitignore file being added and a README.md file being modified, which are both source/config files that should not be ignored.
