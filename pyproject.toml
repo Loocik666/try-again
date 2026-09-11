@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "try-again"
+version = "0.1.0"
+description = "Lightweight Python decorator for automatic function retries with exponential backoff and fallbacks."
+readme = "README.md"
+authors = [{ name = "Alexander Romanuk" }]
+requires-python = ">=3.7"
+dependencies = []
